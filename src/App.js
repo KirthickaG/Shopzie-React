@@ -5,7 +5,6 @@ import Authentication from './routes/authentication/authentication.component';
 import Navigation from './routes/navigation/navigation.component';
 
 
-
 const Shop = () =>
 {
   return(<div>Hello Shopzie</div>)
