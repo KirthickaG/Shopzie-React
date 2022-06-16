@@ -24,6 +24,8 @@ export const auth = getAuth() // singleton // only one auth for entire app
 export const signInWithGooglePopup = () => signInWithPopup(auth,provider) // the reason being this as (function) is 
 // everytime this get called use the current auth and provider or else some stable value gets stored here all time during app
 
+export const signInwithGoogleRedirect = () => signInWithRedirect(auth,provider)
+
 export const db = getFirestore();
 
 export const createUserDocfromAuth = async (userAuth) => 
