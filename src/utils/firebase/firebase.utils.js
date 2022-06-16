@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {getAuth, signInWithPopup, signInWithRedirect, GoogleAuthProvider} from 'firebase/auth'
+import {getFirestore, getDoc, setDoc, doc} from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyCsqQyKk6-ovK-gQlGhZ_B-nAwwjPdyOUU",
@@ -22,3 +23,30 @@ provider.setCustomParameters(
 export const auth = getAuth() // singleton // only one auth for entire app
 export const signInWithGooglePopup = () => signInWithPopup(auth,provider) // the reason being this as (function) is 
 // everytime this get called use the current auth and provider or else some stable value gets stored here all time during app
+
+export const db = getFirestore();
+
+export const createUserDocfromAuth = async (userAuth) => 
+{
+  const userDocRef = doc(db, 'users', userAuth.uid) // create or check for doc
+
+  const userSnapshot = await getDoc(userDocRef) // get the doc snapshot
+
+  if(!userSnapshot.exists()) // if not exists create one doc 
+  {
+    const {displayName, email} = userAuth
+    const createdAt = new Date();
+    try{
+      await setDoc(userDocRef, {
+        displayName,
+        email,
+        createdAt
+      })
+    }
+    catch(err)
+    {
+      console.log("Error creating user",err.message);
+    }
+  }
+  return userDocRef  // else return the existing doc
+}
