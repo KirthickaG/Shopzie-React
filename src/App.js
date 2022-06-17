@@ -4,6 +4,7 @@ import Home from './routes/home/home.component';
 import Authentication from './routes/authentication/authentication.component';
 import Navigation from './routes/navigation/navigation.component';
 import Shop from './routes/shop/shop.component'
+import Checkout from './components/checkout/checkout.component';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         this should be the home component.That's what you render at the outlet level. */}
         <Route path='shop' element={<Shop/>}></Route>
         <Route path='auth' element={<Authentication/>}></Route>
+        <Route path='checkout' element={<Checkout/>}></Route>
       </Route>
     </Routes>
 
