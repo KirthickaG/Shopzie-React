@@ -48,8 +48,8 @@ const SignIn = () =>
     {
         event.preventDefault();
         try{
+            await signInAuthUserWithEmailAndPassword(email,password)
             resetFormFields();
-            const {user} = await signInAuthUserWithEmailAndPassword(email,password)
         }
         catch(error)
         {
