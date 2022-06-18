@@ -55,7 +55,7 @@ const SignUp = () =>
         {
             if(error.code === 'auth/email-already-in-use')
             {
-                alert("cannot create")
+                alert("cannot create email-already-in-use")
             }
             console.log("Error creating user",error.message)
         }
