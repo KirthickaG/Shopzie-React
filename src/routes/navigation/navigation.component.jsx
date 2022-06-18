@@ -23,6 +23,7 @@ const Navigation = () =>
       <div className="navigation">
         <Link className='logo-container' to="/">
             <CrownLogo className='logo'/>
+              <span>Shopzie</span>
         </Link>
 
         <div className='nav-links-container'>
