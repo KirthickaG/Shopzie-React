@@ -67,7 +67,7 @@ const SignUp = () =>
             <span> Sign Up with email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput 
-                label="DisplayName" 
+                label="Display Name" 
                 type="text" 
                 name="displayName" 
                 value={displayName} 

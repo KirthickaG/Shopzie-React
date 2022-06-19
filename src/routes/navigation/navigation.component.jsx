@@ -38,6 +38,7 @@ const Navigation = () =>
             
       </div>      
       <Outlet/>
+      <h3>Winci&#169; {new Date().getFullYear()}</h3>
     </Fragment>
   )
 }
