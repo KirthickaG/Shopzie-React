@@ -1,6 +1,8 @@
 .navigation {
-  height: 70px;
+  height: 100px;
   width: 100%;
+  padding:5px;
+  background-image: linear-gradient(to right, #f9e7fe, #dafcfc);
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
@@ -24,3 +26,9 @@
     }
   }
 }
+
+ h3 {
+   text-align: end;
+   font-family: 'Caveat', cursive;
+   color: grey;
+ }

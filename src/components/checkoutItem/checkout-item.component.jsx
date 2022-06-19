@@ -25,7 +25,7 @@ const CheckoutItem = ({checkoutItem}) =>
                 <span className="value">{quantity}</span>
                 <span className="arrow"  onClick={() => incrementCart(checkoutItem)}>&#10095;</span>
             </span>
-            <span className="price">{price}</span>
+             <span className="price">{`$${price}`}</span>
             <span className= "remove-button" onClick={() => removeEntireItem(checkoutItem)}>&#10005;</span>
         </div>
     )

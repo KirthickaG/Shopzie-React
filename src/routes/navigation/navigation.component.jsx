@@ -23,6 +23,7 @@ const Navigation = () =>
       <div className="navigation">
         <Link className='logo-container' to="/">
             <CrownLogo className='logo'/>
+            <span>Shopzie</span>
         </Link>
 
         <div className='nav-links-container'>
@@ -37,6 +38,7 @@ const Navigation = () =>
             
       </div>      
       <Outlet/>
+      <h3>Winci&#169; {new Date().getFullYear()}</h3>
     </Fragment>
   )
 }
