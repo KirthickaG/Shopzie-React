@@ -9,7 +9,7 @@ const DirectoryItem = ({category}) =>
     return (
         <div className='directory-item-container' onClick={navigateHandler}>
                 <div className="background-image"
-                    style={{backgroundImage : `url(require(${imageUrl}))`}} />
+                    style={{backgroundImage : `url(${imageUrl})`}} />
                 <div className='body'>
                   <h2>{title}</h2>
                   <h4>Shop Now</h4>
