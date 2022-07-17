@@ -1,0 +1,5 @@
+
+export const CATEGORY_ACTION_TYPES = 
+{
+    SET_CATEGORY: 'SET_CATEGORY'
+}
